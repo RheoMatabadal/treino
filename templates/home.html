@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/bulma.css">
+
+
+</head>
+<body>
+<header>
+    {% include 'navigation.html' %}
+</header>
+
+
+<div class="hero-body">
+
+
+    <div class="container has-text-centered">
+
+        <div class="columns is-centered">
+
+            <div class="column is-half">
+
+<h1 class="title is-4">Kassa</h1>
+
+                <div class="card">
+
+                        <div class="card-content">
+                            <h1 class="title is-8">Munten teller</h1>
+                    <form action="{{url_for('countcoins')}}" method="post">
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input"
+                                           placeholder="Vul het aantal een centjes in" name="_01cent">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input"
+                                           placeholder="Vul het aantal vijf centjes in" name="_05cent">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input"
+                                           placeholder="Vul het aantal tien centjes in" name="_10cent">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input"
+                                           placeholder="Vul het aantal vijfentwintig centjes in" name="_025cent">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input" placeholder="Vul het aantal een SRD's in"
+                                           name="_100cent">
+                                </div>
+                            </div>
+
+
+                            <div class="field">
+                                <div class="control">
+                                    <input type="number" min="0" class="input" placeholder="Aantal" name="_250cent">
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class=" col-md-12">
+                                    <button type="submit" class="button is-dark is-medium">Bereken</button>
+                                </div>
+
+                            </div>
+
+                    </form>
+                    <br>
+                </div>
+                <div class="field">
+                    <div class="title is-8">
+                        <div class="">
+                            <div>
+                                <label>Het totale bedrag is: </label>
+                            </div>
+                            <div>
+                                <h2>SRD {{tot}}</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+</html>
