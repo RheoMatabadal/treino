@@ -3,60 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>TREINO BANK</title>
-    <link rel="shortcut icon" type="image/png" href="https://media.discordapp.net/attachments/382333658557710336/416073751462150154/logo.png">
+    <link rel="shortcut icon" type="image/png"
+          href="https://media.discordapp.net/attachments/382333658557710336/416073751462150154/logo.png">
 </head>
 <body>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/bulma.css">
+
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
 
 
 </head>
 <body>
-        <header>
-      {% include 'navigation2.html' %}
+<header>
+    {% include 'navigation2.html' %}
 
-    </header>
-        
-    <div class="container-fluid">
+</header>
 
-    <h2>Kassan Munten Overzicht</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Datum</td>
-                    <td>Kassa</td>
-                    <td>1 Cent</td>
-                    <td>5 Cent</td>
-                    <td>10 Cent</td>
-                    <td>25 Cent</td>
-                    <td>100 Cent</td>
-                    <td>250 Cent</td>
-                    <td>Totaal</td>
+<div class="hero-body">
 
-                </tr>
-            </thead>
-            <tbody>
-               {% for row in data %}
-                <tr>
-                {% for d in row %}
-                    <td>{{ d }}</td>
-                {% endfor %}
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <hr>
+
+    <div class="container has-text-centered">
+
+        <div class="columns is-centered">
+
+            <div class="column is-8">
+
+    <h2 class="title is-2">Kassa Munten Overzicht</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <!--<td>Datum</td>-->
+            <!--<td>Kassa</td>-->
+            <!--<td>1 Cent</td>-->
+            <!--<td>5 Cent</td>-->
+            <!--<td>10 Cent</td>-->
+            <!--<td>25 Cent</td>-->
+            <!--<td>100 Cent</td>-->
+            <!--<td>250 Cent</td>-->
+            <!--<td>Totaal</td>-->
+
+
+            <th><abbr title="datum">Datum</abbr></th>
+            <th><abbr title="kassa">Kassa</abbr></th>
+            <th><abbr title="1_cent">1 Cent</abbr></th>
+            <th><abbr title="5_cent">5 Cent</abbr></th>
+            <th><abbr title="10_cent">10 Cent</abbr></th>
+            <th><abbr title="25_cent">25 Cent</abbr></th>
+            <th><abbr title="100_cent">100 Cent</abbr></th>
+            <th><abbr title="250_cent">250 Cent</abbr></th>
+            <th><abbr title="totaal">Totaal</abbr></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+        <tr>
+            {% for d in row %}
+            <td>{{ d }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <hr>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
@@ -64,6 +94,7 @@
     $(document).ready(function(){
     $('table').DataTable();
 });
+
 </script>
 </body>
 </html>
